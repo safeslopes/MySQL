@@ -2,13 +2,12 @@ create database testes_deslizamentos;
 
 use testes_deslizamentos;
 
-create table teste_deslizamentos(
-id int not null auto_increment,
-precipitacao ENUM('sim','não'),
-pluviometro float not null,
-umidade float not null,
-deslizamento enum('sim','não') not null,
-primary key (id)
-) default character set utf8 collate utf8_general_ci;
+CREATE TABLE dados_clima (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    precipitacao TINYINT(1) NOT NULL,
+    quantidade_chuva INT NOT NULL,
+    umidade_solo INT NOT NULL,
+    deslizamento TINYINT(1) NOT NULL
+);
 
 desc teste_deslizamentos;
